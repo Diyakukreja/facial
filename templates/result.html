@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Result</title>
+</head>
+<body>
+    <h1>Detection Result</h1>
+    <!-- Corrected img source using the uploaded_file route -->
+    <img src="{{ url_for('uploaded_file', filename=output_image) }}" alt="Detected Image" style="max-width: 50%; height: auto;">
+
+    <p>Prediction: {{ label }}</p>
+    <br>
+    <a href="/">Upload Another Image</a>
+</body>
+</html>
